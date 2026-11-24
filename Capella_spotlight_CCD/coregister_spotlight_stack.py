@@ -1,7 +1,15 @@
 #!/usr/bin/env python
-"""Coregister Capella spotlight SLCs onto one master. Run from capella-reader/docs/examples/.
+"""
+Batch coregistration of Capella spotlight SLCs onto a single master. 
 
-python coregister_stack.py MASTER.tif SEC1.tif SEC2.tif ... [--dem-file DEM.tif] [--output-dir stack]
+Run from capella-reader/docs/examples/,
+Adapted from docs/examples/coregister_spotlight.py in capella-reader (Capella Space)
+
+python coregister_spotlight_stack.py MASTER.tif SEC1.tif SEC2.tif ... [--dem-file DEM.tif] [--output-dir stack]
+
+or, if all the SLCs in one folder use :
+python coregister_spotlight_stack.py MASTER.tif SLC/*.tif --output-dir stack
+
 """
 import argparse, shutil, time, traceback
 from pathlib import Path
